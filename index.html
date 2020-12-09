@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Graph</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p id="logo"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i><b>Graph</b></p>
+    <div class="top-buttons-group">
+        <button class="button" onclick="document.getElementById('file-input').click();">
+            <input id="file-input" accept="image/svg+xml" type="file" name="name" style="display: none;" />
+            <i class="fa fa-folder" aria-hidden="true"></i>
+        </button>
+        <button id="draw-button" class="button">
+            <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+    </div>
+</header>
+<main>
+    <div id="sidebar">
+        <textarea id="graph-desc" name="graph-desc"></textarea>
+    </div>
+    <div id="draw-panel"></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.js" type="text/javascript"></script>
+<script src="dist/wasm/wasm.js" type="text/javascript"></script>
+<script src="dist/bundle.js" type="text/javascript"></script>
+</body>
+</html>
